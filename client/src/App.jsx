@@ -3,10 +3,11 @@ import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom"
 import ProjectDetails from "./pages/ProjectDetails"
 import Projects from "./pages/Projects"
 
+
 const client = new ApolloClient({
   uri: import.meta.env.VITE_URL_BK,
   cache: new InMemoryCache(),
-  credentials: 'include',
+  credentials: 'same-origin',
 })
 
 function App() {

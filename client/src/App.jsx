@@ -4,11 +4,12 @@ import ProjectDetails from "./pages/ProjectDetails"
 import Projects from "./pages/Projects"
 
 const client = new ApolloClient({
-  uri: "http://localhost:4000/graphql",
+  uri: import.meta.env.VITE_URL_BK,
   cache: new InMemoryCache(),
 })
 
 function App() {
+  console.log(import.meta.env)
   return (
     <ApolloProvider client={client}>
       <BrowserRouter>

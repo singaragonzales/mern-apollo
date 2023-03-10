@@ -5,6 +5,8 @@ dotenv.config()
 export const connectDB = async() => {
     try {
         mongoose.set('strictQuery', false)
+        console.log(`Mongo Connected:debe entrar`);
+        console.log(`Mongo Connected: ${conn.connection.name}`);
         const conn = await mongoose.connect(process.env.URL_BD)
         console.log(`Mongo Connected: ${conn.connection.name}`);
     } catch (error) {

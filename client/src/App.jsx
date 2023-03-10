@@ -6,6 +6,7 @@ import Projects from "./pages/Projects"
 const client = new ApolloClient({
   uri: import.meta.env.VITE_URL_BK,
   cache: new InMemoryCache(),
+  credentials: 'include',
 })
 
 function App() {

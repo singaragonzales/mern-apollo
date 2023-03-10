@@ -8,9 +8,15 @@ export async function startApolloServer(typeDefs, resolvers) {
     const app = express()
     const httpServer = http.createServer(app)
 
+    const corsOptions = {
+        origin: process.env.URL_IP,
+        credentials: true
+    };
+
     const server = new ApolloServer({
         typeDefs,
-        resolvers
+        resolvers,
+        cors: corsOptions
     })
 
     await server.start()

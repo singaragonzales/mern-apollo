@@ -4,8 +4,7 @@ import dotenv from "dotenv";
 dotenv.config()
 var options = {
     logger: console.log,
-    loggerLevel: 'info',
-    poolSize: 10
+    loggerLevel: 'info'
 } 
 export const connectDB = async() => {
     try {

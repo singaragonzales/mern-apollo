@@ -6,7 +6,6 @@ export const connectDB = async() => {
     try {
         mongoose.set('strictQuery', false)
         mongoose.set('debug', true)
-        console.log(`Mongo Connected:debe entrar`);
         const conn = await mongoose.connect(process.env.URL_BD)
         console.log(`Mongo Connected: ${conn.connection.name}`);
     } catch (error) {

@@ -11,7 +11,6 @@ const client = new ApolloClient({
 })
 
 function App() {
-  console.log(import.meta.env)
   return (
     <ApolloProvider client={client}>
       <BrowserRouter>
